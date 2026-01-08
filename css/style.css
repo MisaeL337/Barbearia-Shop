@@ -1,9 +1,11 @@
 /* Reset básico */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 html, body {
@@ -20,6 +22,7 @@ a {
 .container-fluid.cor1 {
   background: #1f1f1f;
   padding: 20px 40px;
+  border-radius: 0 0 30px 30px;
 }
 
 .row {
@@ -59,11 +62,25 @@ a:hover {
   border-radius: 50%;
 }
 
-/* Carrossel */
+/* Carrossel Hero */
 .carousel-inner img {
-  height: 500px;
+  height: 85vh; /* Ocupa 85% da altura da tela */
   object-fit: cover;
-  filter: brightness(90%);
+  filter: brightness(50%); /* Mais escuro para o texto brilhar */
+}
+
+.carousel-caption {
+  bottom: 35%;
+  text-align: center;
+}
+
+.carousel-caption h5 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
 }
 
 /* Seções */
@@ -74,7 +91,7 @@ section {
 #colfundo {
   background-color: rgba(30, 30, 30, 0.9);
   padding: 40px;
-  border-radius: 12px;
+  border-radius: 30px;
 }
 
 #quemsomos h2,
@@ -96,16 +113,16 @@ section {
   width: 100%;
   max-width: 600px;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  border-radius: 30px; /* Mais arredondado */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 /* Formulário */
 form {
   background-color: #2b2b2b;
   padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 30px; /* Mais arredondado */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
 
 .form-label {
@@ -116,15 +133,19 @@ form {
   background-color: #fff;
   border: 1px solid #ccc;
   color: #000;
+  border-radius: 15px;
+  padding: 12px;
 }
 
 button {
   background-color: #00d1ff;
   border: none;
   color: #000;
-  font-weight: bold;
-  padding: 12px;
-  border-radius: 8px;
+  font-weight: 700;
+  padding: 15px 40px;
+  border-radius: 50px; /* Botão pílula */
+  text-transform: uppercase;
+  letter-spacing: 1px;
   transition: background 0.3s ease;
 }
 
@@ -137,6 +158,7 @@ button:hover {
 .container-fluid.cor2 {
   background-color: #111;
   padding: 60px 20px;
+  border-radius: 30px 30px 0 0;
 }
 
 .icone, .icone1 {
@@ -162,7 +184,7 @@ hr {
 /* Responsividade */
 @media (max-width: 1200px) {
   .carousel-inner img {
-    height: 450px;
+    height: 70vh;
   }
 }
 
@@ -179,7 +201,7 @@ hr {
   }
 
   .carousel-inner img {
-    height: 400px;
+    height: 60vh;
   }
 }
 
@@ -194,7 +216,7 @@ hr {
   }
 
   .carousel-inner img {
-    height: 300px;
+    height: 50vh;
   }
 
   form {
@@ -213,7 +235,11 @@ hr {
   }
 
   .carousel-inner img {
-    height: 250px;
+    height: 100vh; /* Fullscreen no mobile */
+  }
+  
+  .carousel-caption h5 {
+    font-size: 2rem;
   }
 
   button {
@@ -221,4 +247,3 @@ hr {
     font-size: 0.9rem;
   }
 }
-/*oi*/
